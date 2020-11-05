@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Estilos para Prims Codigos de ejemplo-->
+    <link rel="stylesheet" href="css/prism.css">
+
+    <!--Estilos Modificaciones-->
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>OVI Css 3</title>
+  </head>
+  <body>
+
+    <!--Menu Navegacion-->
+
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-azul-unad">
+            <a class="navbar-brand text-white">
+                <img src="imagenes/logounad.png" width="30" height="30" class="d-inline-block align-top" alt="Logotipo Unad" loading="lazy">
+                    UNAD
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a href="index.html" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-target="desplegable">Conceptos</a>
+                        <div class="dropdown-menu type">
+                            <a class="dropdown-item" href="estilosinternos.html">Estilos Internos CSS</a>
+                            <a class="dropdown-item" href="estilosexternos.html">Estilos Externos CSS</a>
+                            <a class="dropdown-item" href="selectorescss.html">Selectores Basicos CSS</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-target="desplegable">Recursos</a>
+                        <div class="dropdown-menu type">
+                            <a class="dropdown-item" href="recurso1.html">Recurso 1</a>
+                            <a class="dropdown-item" href="recurso2.html">Recurso 2</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-target="desplegable">Autoevaluacion</a>
+                        <div class="dropdown-menu type">
+                            <a class="dropdown-item" href="#">Primera Web</a>
+                            <a class="dropdown-item" href="#">Segunda Web</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="autor.html" class="nav-link">Autor</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!--Seccion De Inicio Principal-->
+    <div class="container" id="principal" style="margin-top:2em;">      
+        <div class="row">
+            <div class="col">
+                <h2><strong>Parte 3</strong></h2>
+                <h3 class="centrar">¿Qué son los selectores en Css 3?</h3>
+                <div class="centrar-linea">
+                        <div class="dividir"></div>
+                </div>
+
+                <p>CSS tiene su propia terminología para describir el lenguaje CSS. Anteriormente en este tutorial, que ha creado una línea en su hoja de estilos como esta:</p>
+                <pre class="language-css">
+                    <code class="language-css">
+                        p {
+                            color: red; 
+                        }
+                    </code>
+                </pre>
+                <p><strong>Más detalles<br></strong>
+                    La parte interior de las llaves es la declaración.
+                    La palabra clave es color, que es una propiedad, y el rojo es el valor.
+                    El punto y coma después de el par propiedad-valor separa los posibles otros pares de  propiedad-valor en una misma declaración.
+                    Este tutorial se refiere a un selector como strong como un selector de etiquetas. La especificación CSS se refiere a él como un selector de tipo ( type selector).
+                </p>
+                <h2 class="centrar">Tipos de Selectores Basicos</h2>
+                <div class="centrar-linea">
+                        <div class="dividir"></div>
+                </div>
+
+                <ul>
+                    <li>Selector Universal</li>
+                    <li>Selector de Etiquetas</li>
+                    <li>Selectores de Clase</li>
+                    <li>Selectores de ID</li>
+                    <li>Pseudo-clases de los Selectores</li>
+                </ul>
+
+                <h3 class="centrar">Selector Universal</h3>
+                <div class="centrar-linea">
+                        <div class="dividir"></div>
+                </div>
+
+                <p>Se utiliza para seleccionar todos los elementos de la página. El siguiente ejemplo elimina el margen y el relleno de todos los elementos HTML (por ahora no es importante fijarse en la parte de la declaración de la regla CSS):</p>
+                <pre class="language-css">
+                    <code class="language-css">
+                        * {
+                            margin: 0;
+                            padding: 0;
+                        }
+                    </code>
+                </pre>
+
+                <p>El selector universal se indica mediante un asterisco (*). A pesar de su sencillez, no se utiliza habitualmente, ya que es difícil que un mismo estilo se pueda aplicar a todos los elementos de una página.</p>
+
+                <h3 class="centrar">Selector de Etiquetas</h3>
+                <div class="centrar-linea">
+                        <div class="dividir"></div>
+                </div>
+
+                <p>Selecciona todos los elementos de la página cuya etiqueta HTML coincide con el valor del selector. El siguiente ejemplo selecciona todos los párrafos de la página:</p>
+                <pre class="language-css">
+                    <code class="language-css">
+                        p {
+                            //Propiedades Css 
+
+                        }
+                    </code>
+                </pre>
+                <p>Para utilizar este selector, solamente es necesario indicar el nombre de una etiqueta HTML (sin los caracteres < y >) correspondiente a los elementos que se quieren seleccionar.</p>
+                
+                <h3 class="centrar">Selector de Clase</h3>
+                <div class="centrar-linea">
+                        <div class="dividir"></div>
+                </div>
+
+                <p>Utilice el atributo class para asignarle  a un elemento un nombre de clase (class). Depende del nombre que elijas como class. Múltiples elementos en un documento pueden tener el mismo valor de la clase.</p>
+                <pre class="language-html">
+                    <code class="language-html">
+            &lt;p class=&quot;destacado&quot;&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+            &lt;p&gt;Nunc sed lacus et est adipiscing accumsan...&lt;/p&gt;
+            &lt;p&gt;Class aptent taciti sociosqu ad litora...&lt;/p&gt;
+                    </code>
+                </pre>
+                <p>En su hoja de estilo, escriba un punto (.) antes del nombre de la clase, cuando se utiliza como un selector.</p>
+                
+                <pre class="language-css">
+                    <code class="language-css">
+                        .destacado { color: red; }
+                    </code>
+                </pre>
+                <p>En un navegador Web se veria algo asi.</p>
+                <p class="destacado">Lorem ipsum dolor sit amet...</p>
+                <p>Nunc sed lacus et est adipiscing accumsan...</p>
+                <p>Class aptent taciti sociosqu ad litora...</p>
+
+                <h3 class="centrar">Selector de ID</h3>
+                <div class="centrar-linea">
+                        <div class="dividir"></div>
+                </div>
+
+                <p>Utilice el atributo id en un elemento para asignar un identificación para ese elemento. Depende de usted el nombre que elija para el ID. El nombre de ID debe ser único en el documento.</p>
+                <pre class="language-html">
+                    <code class="language-html">
+                &lt;p class=&quot;key&quot; id=&quot;principal&quot;&gt;
+                    </code>
+                </pre>
+                <p>En su hoja de estilo, escriba un símbolo de almohadilla (#) ante el ID cuando se utiliza esto en un selector.</p>
+                <pre class="language-css">
+                    <code class="language-css">
+                        #principal {
+                          font-weight: bolder;
+                        }
+                    </code>
+                </pre>
+                <p>El valor de <strong>id</strong> es, <strong>principal</strong>, debe ser único en el documento; pero otras etiquetas del documento puede tener el mismo nombre de la class, Key.</p>
+
+                <p>Si más de una regla se aplica a un elemento y especifica la misma propiedad, entonces el CSS da prioridad a la regla que tiene el selector más específico. Un selector <strong>ID</strong> es más específico que un selector de <strong>class</strong>, que a su vez es más específico que un selector (<strong>tag</strong>) de etiquetas.</p>
+
+                <h3 class="centrar">Pseudo-clases de los Selectores</h3>
+                <div class="centrar-linea">
+                        <div class="dividir"></div>
+                </div>
+
+                <p>Una pseudoclase se usa para definir un estado especial de un elemento.</p>
+
+                <p>Por ejemplo, se puede utilizar para:</p>
+                <ul>
+                    <li>Aplicar estilo a un elemento cuando un usuario pasa el mouse sobre él.</li>
+                    <li>Estilo de enlaces visitados y no visitados de manera diferente.</li>
+                    <li>Aplicar estilo a un elemento cuando se enfoca.</li>
+                </ul>
+                <h2>Sintaxis</h2>
+                <p>La sintaxis de las pseudoclases:</p>
+                <pre class="language-css">
+                    <code class="language-css">
+                        selector:pseudo-class {
+                                propiedad: valor;
+                        }
+                    </code>
+                </pre>
+                <p>Veremos un ejemplo de una PseudoClase. <strong>:hover</strong><p/>
+                <pre class="language-html">
+                    <code class="language-html">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                        &lt;head&gt;
+                        &lt;style&gt;
+                        div {
+                          background-color: green;
+                          color: white;
+                          padding: 25px;
+                          text-align: center;
+                        }
+
+                        div:hover {
+                          background-color: blue;
+                        }
+                        &lt;/style&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+
+                            &lt;p&gt;Pase el mouse sobre el elemento div a continuación para cambiar su color de fondo:&lt;/p&gt;
+
+                            &lt;div&gt;Pasar el Raton sobre mí&lt;/div&gt;
+
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                    </code>
+                </pre>
+                <p>En el Ejemplo anterior aplicamos los estilos CSS con la etiqueta <strong>style</strong>, y usamos un selector de etiqueta que es el <strong>div</strong>, pero además usamos una PseudoClase de la etiqueta <strong>div:hover</strong>. Es en este ultimo donde está la magia porque al momento de pasar el puntero de nuestro raton veremos como cambia de color en el siguiente ejemplo. </p>
+                <p>En un navegador Web se veria algo asi.</p>
+                <div>Pasar el Raton sobre mí</div>
+                <p>Genial Cierto ! Pues hay más PseudoClases que se puede usar a continucación mostramos una listado de pseudoclases:</p>
+
+                <ul>
+                    <li>:link</li>
+                    <li>:visited</li>
+                    <li>:active</li>
+                    <li>:hover</li>
+                    <li>:focus</li>
+                    <li>:first-child</li>
+                    <li>:last-child</li>
+                    <li>:nth-child</li>
+                    <li>:nth-last-child</li>
+                    <li>:nth-of-type</li>
+                    <li>:first-of-type</li>
+                    <li>:last-of-type</li>
+                    <li>:empty</li>
+                    <li>:target</li>
+                    <li>:checked</li>
+                    <li>:enabled</li>
+                    <li>:disabled</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Seccion Footer-->
+    <div class="container">
+            <footer class="page-footer font-small teal pt-4">
+
+                <div class="container-fluid text-center text-md-left">
+                
+                <div class="row">
+                  <div class="col">
+
+                    <!-- Contenido -->
+                    <h5 class="text-uppercase font-weight-bold">Bibliografía</h5>
+                    
+
+                    <blockquote cite="https://elibro-net.bibliotecavirtual.unad.edu.co/es/ereader/unad/56045">
+                        Celaya Luna, A. (2014). Creación de páginas web: HTML 5. Recuperado de <a class="link2" href="https://elibro-net.bibliotecavirtual.unad.edu.co/es/ereader/unad/56045">https://elibro-net.bibliotecavirtual.unad.edu.co/es/ereader/unad/56045</a>
+                    </blockquote>
+
+                    <blockquote cite="https://osvaldogalvan.com/blog/css-basico-para-html/">
+                        Osvaldo Galván,(30-09-2020). Todo lo que debes saber sobre CSS básico para HTML. osvaldogalvan.com. dirección de donde se extrajo el documento <a class="link2" href="https://osvaldogalvan.com/blog/css-basico-para-html/">https://osvaldogalvan.com/blog/css-basico-para-html/</a>.
+                    </blockquote>
+
+                    <blockquote cite="https://www.freeformatter.com/html-escape.html#ad-output">
+                        FREEFORMATTER. (2020). Free Online Tools For Developers. freeformatter.com. dirección de donde se extrajo el documento 
+                        <a class="link2" href="https://www.freeformatter.com/html-escape.html#ad-output" target="_blank">https://www.freeformatter.com/html-escape.html#ad-output</a>
+                    </blockquote>
+
+                    <blockquote cite="https://www.w3schools.com/css/css_pseudo_classes.asp">
+                        W3.CSS. (2020). CSS Pseudo-classes. www.w3schools.com. dirección de donde se extrajo el documento 
+                        <a class="link2" href="https://www.w3schools.com/css/css_pseudo_classes.asp" target="_blank">https://www.w3schools.com/css/css_pseudo_classes.asp</a>
+                    </blockquote>
+
+                    <blockquote cite="https://developer.mozilla.org/es/docs/Web/CSS/:link">
+                        :link. (2020). developer.mozilla.org. dirección de donde se extrajo el documento 
+                        <a class="link2" href="https://developer.mozilla.org/es/docs/Web/CSS/:link" target="_blank">https://developer.mozilla.org/es/docs/Web/CSS/:link</a>
+                    </blockquote>
+
+                    <blockquote cite="https://uniwebsidad.com/libros/css/capitulo-2/selectores-basicos">
+                        uniwebsidad. (2020). 2.1. Selectores básicos. uniwebsidad.com. dirección de donde se extrajo el documento
+                        <a class="link2" href="https://uniwebsidad.com/libros/css/capitulo-2/selectores-basicos" target="_blank">https://uniwebsidad.com/libros/css/capitulo-2/selectores-basicos</a>
+                    </blockquote>
+
+                    <blockquote cite="https://developer.mozilla.org/es/docs/Web/CSS/Introducci%C3%B3n/Selectors">
+                        Colaboradores MDN. (2019). Información: Selectores. developer.mozilla.org. dirección de donde se extrajo el documento
+                        <a class="link2" href="https://developer.mozilla.org/es/docs/Web/CSS/Introducci%C3%B3n/Selectors" target="_blank">https://developer.mozilla.org/es/docs/Web/CSS/Introducci%C3%B3n/Selectors</a>
+                    </blockquote>
+
+                    <blockquote cite="https://prismjs.com/">
+                        Michael Schmidt, James DiGioia, Golmote and Jannik Zschiesche. (n/a). The Prism source. prismjs.com. dirección de donde se extrajo el documento
+                        <a class="link2" href="https://prismjs.com/" target="_blank">https://prismjs.com/</a>
+                    </blockquote>
+
+                  </div>
+                  
+                </div>
+              </div>
+              <!-- Copyright Footer -->
+              <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a class="link" href="https://www.unad.edu.co/" target="_blank"> Universiad Nacional Abierta y a Distancia</a>
+              </div>
+              <!-- Copyright Final -->
+
+            </footer>
+    </div>
+            
+
+
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!--Js de Prims-->
+    <script src="js/prism.js"></script>
+  </body>
+</html>
